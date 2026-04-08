@@ -5,57 +5,80 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
+    android:background="#F5F5F5"
     android:gravity="center_horizontal">
 
     <Button
         android:id="@+id/btnSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings (Theme)"
-        android:layout_gravity="end" />
+        android:text="Theme Settings"
+        android:layout_gravity="end"
+        android:backgroundTint="#607D8B"
+        android:textColor="#FFFFFF"
+        style="@style/Widget.AppCompat.Button.Small"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Currency Converter"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="#6200EE"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="40dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Enter Amount:"
-        android:textSize="18sp"
-        android:layout_marginTop="32dp" />
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:layout_gravity="start" />
 
     <EditText
         android:id="@+id/etAmount"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberDecimal" />
+        android:layout_height="55dp"
+        android:inputType="numberDecimal"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="24dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="16dp"
         android:weightSum="2">
 
         <Spinner
             android:id="@+id/spinnerFrom"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@android:drawable/btn_dropdown"
             android:entries="@array/currency_list" />
 
         <Spinner
             android:id="@+id/spinnerTo"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="55dp"
             android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@android:drawable/btn_dropdown"
             android:entries="@array/currency_list" />
-
     </LinearLayout>
 
     <Button
         android:id="@+id/btnConvert"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Convert"
-        android:layout_marginTop="24dp" />
+        android:layout_height="60dp"
+        android:text="Convert Now"
+        android:textSize="18sp"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#6200EE"
+        android:textColor="#FFFFFF" />
 
     <TextView
         android:id="@+id/tvResult"
@@ -64,6 +87,9 @@
         android:text="Result will appear here"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:layout_marginTop="32dp" />
+        android:textColor="#333333"
+        android:layout_marginTop="40dp"
+        android:padding="16dp"
+        android:background="#E1BEE7" />
 
 </LinearLayout>
