@@ -1,13 +1,13 @@
 package com.example.currencyconverter;
 
 import android.os.Bundle;
-import android.widget.Switch;
+import androidx.appcompat.widget.SwitchCompat;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    Switch switchTheme;
+    SwitchCompat switchTheme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class SettingsActivity extends AppCompatActivity {
             switchTheme.setChecked(true);
         }
 
-        // Switch on/off hone par theme change karne ka logic
+        // Switch on/off and theme change logic
         switchTheme.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
